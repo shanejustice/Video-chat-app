@@ -1,0 +1,21 @@
+{
+  "name": "video-chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "watch": "npx watchify ./public/main.js -o ./public/bundle.js"
+  },
+  "author": "shane",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.18.11",
+    "simple-peer": "^9.3.0",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "watchify": "^3.11.1"
+  }
+}
