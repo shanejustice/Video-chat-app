@@ -30,9 +30,14 @@ navigator.mediaDevices.getUserMedia({video: true, audio: true})
 			peer.destroy()
 		})
 		return peer
+	}
 
+	function RemoveVideo(){
+		document.getElementById('peerVideo').remove();
 
 	}
+
+
 	//for peer of type init OR this function will be called when we want a peer which will send a offer  
 	function MakePeer(){
 		//we sent offer and wait for the answer till then got answer is false
@@ -89,6 +94,7 @@ navigator.mediaDevices.getUserMedia({video: true, audio: true})
 	socket.on('BackAnswer', SignalAnswer)
 	socket.on('SessionActive', SessionActive)
 	socket.on('CreatePeer', MakePeer)
+	socket.on('RemoveVideo', RemoveVideo)
 
 
 
